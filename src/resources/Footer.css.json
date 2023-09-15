@@ -1,0 +1,20 @@
+{
+    "layoutFooter": {
+        "backgroundColor": "#434D5C",
+        "color": "#FFFFFF",
+        "height": "100px",
+        "paddingInline": "50px",
+        "display": "flex",
+        "justifyContent": "center",
+
+        "footer": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            
+            "links": {
+                "display": "flex",
+                "flexWrap": "nowrap"
+            }
+        }
+    }
+}
