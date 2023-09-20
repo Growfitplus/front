@@ -1,0 +1,21 @@
+{
+    "layoutHeader": {
+        "background": "white",
+        "height": "120px",
+        "width": "100%",
+        "display": "flex",
+        "justifyContent": "end",
+        "position": "fixed",
+        "zIndex": "10",
+        "header": {
+            "display": "flex",
+            "justifyContent": "space-between",
+            "background": "white",
+            "menu": {
+                "background": "transparent",
+                "minWidth": "275px"
+            }
+        },
+        "agendar": {}
+    }
+}
