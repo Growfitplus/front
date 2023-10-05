@@ -11,7 +11,7 @@ import { scroller } from "react-scroll";
 
 const { Header } = Layout;
 
-const NavBarComponent = ({ colorNav, toggleLogo }) => {
+const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
     const [toggle, setToggle] = useState(false);
 
     function closeMenu(){
@@ -51,7 +51,7 @@ const NavBarComponent = ({ colorNav, toggleLogo }) => {
         <Layout className="layoutHeader" style={{ background: colorNav }}>
             <Header className="header" style={{ background: colorNav }}>
                 <div className="align-items-center container-logo">
-                    <LogoComponent toggleLogo={toggleLogo} />
+                    <LogoComponent toggleLogo={toggleLogo} width={width} />
                 </div>
 
                 <div />
@@ -78,32 +78,35 @@ const NavBarComponent = ({ colorNav, toggleLogo }) => {
                     <Link className="agendar-button-nav" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
                         Agendar
                     </Link>
-                    <Button className="menu-button-nav" onClick={closeMenu}>
+                    {/* <button className="menu-button-nav" onClick={closeMenu}>
                         <img alt="" src={toggle ? imageCloseMenu : imageMenu} />
-                    </Button>
+                    </button> */}
+                    <div className="menu-button-nav-2" onClick={closeMenu}>
+                        <img alt="" src={toggle ? imageCloseMenu : imageMenu} />
+                    </div>
                 </div>
 
                 { toggle && <div className="menu-mobile">
                     <Menu mode="vertical" defaultSelectedKeys={['1']}>
-                        <Menu.Item className="px-0 my-1" key="1" to="#inicio">
+                        <Menu.Item className="px-0 my-1 custom-list-item" key="1" to="#inicio">
                             <Link onClick={() => scrollToComponent("inicio")}>
-                                <h2 className="ml-0">Inicio</h2>
+                                <h1 className="ml-0">Inicio</h1>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item className="px-0 my-1" key="2" to="#metodo1">
+                        <Menu.Item className="px-0 my-1 custom-list-item" key="2" to="#metodo1">
                             <Link onClick={() => scrollToComponent("metodo1")}>
-                                <h2 className="ml-0">El Método</h2>
+                                <h1 className="ml-0">El Método</h1>
                             </Link>
                         </Menu.Item>
-                        <Menu.Item className="px-0 my-1" key="3" to="#precio">
+                        <Menu.Item className="px-0 my-1 custom-list-item" key="3" to="#precio">
                             <Link onClick={() => scrollToComponent("precio")}>
-                                <h2 className="ml-0">Precio</h2>
+                                <h1 className="ml-0">Precio</h1>
                             </Link>
                         </Menu.Item>
                     </Menu>
                     <Link className="boton-menu-agendar" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer"
                     >
-                        <h2 className="ml-0">Agendar</h2>
+                        <h1 className="ml-0">Agendar</h1>
                         <img alt="" className="icon-image-menu" src={imageArrow} />
                     </Link>
                     <div></div>

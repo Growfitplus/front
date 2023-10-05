@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 /* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom"
@@ -28,6 +29,7 @@ import imageCamino from "../resources/assets/Vector.png";
 export default function HomePage() {
 
   const [colorNav, setColorNav] = useState("transparent");
+  const [width, setWidth] = useState(0);
   const [toggleLogo, setToggleLogo] = useState(false);
   const [globo1, setGlobo1] = useState(false);
 
@@ -40,20 +42,16 @@ export default function HomePage() {
       } else {
         setColorNav("transparent");
       }
-
+      
+      setWidth(screen.width);
       setToggleLogo(window.scrollY);
-      /* if (window.scrollY && window.scrollY > 1050) {
-        setToggleLogo(true);
-      } else {
-        setToggleLogo(false);
-      } */
         
       if ( window.innerWidth >= 768 ) {
-        if (window.scrollY && window.scrollY > 2300) {
+        if (window.scrollY && window.scrollY > 1900) {
           setGlobo1( true );
         }
       } else {
-        if (window.scrollY && window.scrollY > 3300) {
+        if (window.scrollY && window.scrollY > 2900) {
           setGlobo1( true );
         }
       } 
@@ -62,8 +60,8 @@ export default function HomePage() {
   }, []);
 
   return (<>
-    <div className="container body-content">
-      <NavBarComponent key="1" colorNav={colorNav} toggleLogo={toggleLogo} />
+    <div className="body-content">
+      <NavBarComponent key="1" colorNav={colorNav} toggleLogo={toggleLogo} width={width} />
 
       <InicioSection key="2" />
 
