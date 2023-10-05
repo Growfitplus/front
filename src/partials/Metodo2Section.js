@@ -27,7 +27,7 @@ export default function Metodo2Section() {
         <section className="metodo2">
             <Row>
                 <Col xs={{ span: 24, order: 1 }} lg={{ span: 13, order: 2 }} className="pad-lat">
-                    <h1>
+                    <h1 className="bold">
                         ¿Con cuál te <br />
                         identificas?
                     </h1>
@@ -38,31 +38,31 @@ export default function Metodo2Section() {
                                 <div className="container-icon-list">
                                     <img alt="" className="icon-list" src={imageTenedor} />
                                 </div>
-                                <h2>Como en exceso</h2>
+                                <h2 className="list-item-ident">Como en exceso</h2>
                             </li>
                             <li className="ident-list-item">
                                 <div className="container-icon-list">
                                     <img alt="" className="icon-list" src={imageCorazon} />
                                 </div>
-                                <h2>Vivo con estrés</h2>
+                                <h2 className="list-item-ident">Vivo con estrés</h2>
                             </li>
                             <li className="ident-list-item">
                                 <div className="container-icon-list">
                                     <img alt="" className="icon-list" src={imageLuna} />
                                 </div>
-                                <h2>Duermo poco</h2>
+                                <h2 className="list-item-ident">Duermo poco</h2>
                             </li>
                             <li className="ident-list-item">
                                 <div className="container-icon-list">
                                     <img alt="" className="icon-list" src={imageCamino} />
                                 </div>
-                                <h2>No hago ejercicio</h2>
+                                <h2 className="list-item-ident">No hago ejercicio</h2>
                             </li>
                         </ul>
 
                     </Row>
                 </Col>
-                <Col xs={{ span: 24, order: 2 }} lg={{ span: 11, order: 1 }} className="pad-lat" >
+                <Col xs={{ span: 24, order: 2 }} lg={{ span: 11, order: 1 }} className="pad-lat align-items-center" >
                     <img alt="" src={imagePareja2} />
                 </Col>
             </Row>

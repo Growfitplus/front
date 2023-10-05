@@ -24,9 +24,9 @@ export default function PrecioSection() {
     }, []);
 
     return (
-        <section id="precio" className="precio">
+        <section id="precio" className="precio pt-3">
             <Row className="pad-lat">
-                <h1>
+                <h1 className="bold">
                     Precios <br />
                     Pack de sesiones
                 </h1>
@@ -57,7 +57,7 @@ export default function PrecioSection() {
                                     1 Sesión
                                 </h3>
                                 <div>
-                                    <h2 className="text-left">
+                                    <h2 className="text-left price-number">
                                         <span className="t-green">
                                             $
                                         </span>
@@ -83,7 +83,7 @@ export default function PrecioSection() {
                                     1 Sesión
                                 </h3>
                                 <div>
-                                    <h2 className="text-left">
+                                    <h2 className="text-left price-number">
                                         <span className="t-green">
                                             $
                                         </span>
@@ -111,7 +111,7 @@ export default function PrecioSection() {
                                     1 Sesión
                                 </h3>
                                 <div>
-                                    <h2 className="text-left">
+                                    <h2 className="text-left price-number">
                                         <span className="t-green">
                                             $
                                         </span>
@@ -135,16 +135,21 @@ export default function PrecioSection() {
                     </Row>
                 </Col>
             </Row>
-            <hr style={{ marginBottom: '0px' }} />
+
+            <hr className="d-none d-md-block hr-bar" />
+
             <Link to="mailto:growfitplus@gmail.com" target="_blank" rel="noopener noreferrer" className="container-link">
                 <Row className="pad-lat py-2">
                     <Col xs={{ span: 24 }} lg={{ span: 12 }} className="" >
                         <h3 className="text-dudas">¿Tienes dudas?</h3>
                     </Col>
+                    <Col xs={{ span: 24 }} lg={{ span: 24 }} className="d-block d-md-none" >
+                        <hr className="d-flex d-md-none hr-bar" />
+                    </Col>
                     <Col xs={{ span: 24 }} lg={{ span: 12 }} className="">
                         <div className="li-to-email align-items-center">
                             <div rel="noopener noreferrer" className="container-lonk-to-email">
-                                <h3>growfitplus@gmail.com</h3>
+                                <h3 className="link-agendar">growfitplus@gmail.com</h3>
                                 <img alt="" className="icon-image" src={imageArrow} />
                             </div>
                         </div>

@@ -1,5 +1,6 @@
+/* eslint-disable no-loop-func */
 import React, { useEffect, useState } from "react";
-import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./pages/HomePage"
 
 // import TimerComponent from "./components/TimerComponent"
@@ -9,7 +10,7 @@ import './resources/css/App.css';
 import "./resources/css/preLoading.css";
 
 export default function App() {
-  
+
   const [time, setTime] = useState(0);
   const [status, setStatus] = useState('stopped');
   const [intervalo, setIntervalo] = useState(1500);
@@ -18,53 +19,27 @@ export default function App() {
   const [completed, setcompleted] = useState(false);
 
   useEffect(() => {
-    console.log("status: ", status);
+    let newTime = 0;
+    let interval;
 
-    if (status==='started') {
-      if (time === 100) {
-        
-        if (loading || !completed) {
-          setTimeout(() => {
-            setloading(false);
-            setcompleted(true);
-          }, 1000);
-        }
+    interval = setInterval(() => {
+      newTime = (newTime + 1);
 
+      if (newTime <= 100) {
+        setTime(newTime);
       } else {
-  
-        setTimeout(() => {
-          setTime(time + 1);
-        }, intervalo);
-
+        setloading(false);
+        setcompleted(true);
+        clearInterval(interval);
       }
-    }
-  }, [completed, intervalo, loading, status, time])
-
-  useEffect(() => {
-    setTimeout(async () => {
-      setStatus('started');
-
-      fetch("https://jsonplaceholder.typicode.com/posts")
-        .then((response) => response.json())
-        .then((json) => {
-
-          console.log('ready!');
-          setIntervalo(50);
-
-        }).catch((error) => {
-
-          console.log('error!');
-          setIntervalo(50);
-          
-        });
-    }, 2000);
+    }, 80);
   }, []);
 
   return (
     <>
       {loading ? (
         <div className="spinner">
-          <span className={time===100?'contador-complete':'contador'}>{time}%</span>
+          <span className={time === 100 ? 'contador-complete' : 'contador'}>{time}%</span>
           {/* <div className="half-spinner"></div> */}
         </div>
       ) : (

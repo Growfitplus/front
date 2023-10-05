@@ -29,12 +29,17 @@ export default function InicioSection() {
   return (
     <section id="inicio" className="inicio">
       <Row>
-        <Col xs={{ span: 24 }} lg={{ span: 11 }} className="inicio-left">
+        <Col xs={{ span: 24 }} lg={{ span: 12 }} className="inicio-left">
           <div>
-            <h1>
+            <h1 className="show-sm bold">
               Baja <br />
               esos kilos <br />
               sin dietas
+            </h1>
+            <h1 className="show-md bold">
+              Baja esos<br />
+              kilos sin<br />
+              dietas
             </h1>
             <h3 className="text-secundario-inicio">
               Pastillas “milagrosas” <br />
@@ -52,7 +57,7 @@ export default function InicioSection() {
             </div>
           </div>
         </Col>
-        <Col xs={{ span: 24 }} lg={{ span: 13 }} className="inicio-rigth">
+        <Col xs={{ span: 24 }} lg={{ span: 12 }} className="inicio-rigth">
           <img alt="" src={imagePareja} />
         </Col>
       </Row>

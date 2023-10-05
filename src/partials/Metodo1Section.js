@@ -28,7 +28,7 @@ export default function Metodo1Section() {
       <Row>
         <Col xs={{ span: 24 }} lg={{ span: 10 }} className="pad-lat" >
           <Row>
-            <h1>
+            <h1 className="text-extra bold">
               El <br />
               Método
             </h1>

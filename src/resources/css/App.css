@@ -120,6 +120,11 @@ button {
   padding-bottom: 1rem;
 }
 
+.pt-3{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .ml-0{
   margin-left: 0px !important;
 }
