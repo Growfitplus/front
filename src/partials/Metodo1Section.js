@@ -1,21 +1,6 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom"
-import { Row, Col, DatePicker, Image, Button, Card, List, Avatar } from 'antd';
-import NavBarComponent from "../components/NavBarComponent"
-import FooterComponent from "../components/FooterComponent"
+import React, { useEffect } from "react";
+import { Row, Col } from 'antd';
 import "../resources/css/Home.css"
-
-import imagePareja from "../resources/assets/home.png";
-import imagePareja2 from "../resources/assets/Pareja.png";
-import imageWhatsapp from "../resources/assets/Whatsapp.png";
-import imageBannerCoffe from "../resources/assets/Component 2.svg";
-import imageArrow from "../resources/assets/Arrow Right ✅.png";
-
-import imageTenedor from "../resources/assets/Union.png";
-import imageCorazon from "../resources/assets/Heart Off ✅.png";
-import imageLuna from "../resources/assets/Component 1.png";
-import imageCamino from "../resources/assets/Vector.png";
 
 export default function Metodo1Section() {
 

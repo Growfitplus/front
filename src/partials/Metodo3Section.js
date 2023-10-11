@@ -1,22 +1,9 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom"
-import { Row, Col, DatePicker, Image, Button, Card, List, Avatar } from 'antd';
-import NavBarComponent from "../components/NavBarComponent"
-import FooterComponent from "../components/FooterComponent"
+import React, {  } from "react";
 import "../resources/css/Home.css"
 import FadeCompoent from "../components/FadeComponent";
 
-import imagePareja from "../resources/assets/home.png";
-import imagePareja2 from "../resources/assets/Pareja.png";
-import imageWhatsapp from "../resources/assets/Whatsapp.png";
 import imageBannerCoffe from "../resources/assets/Component 2.svg";
-import imageArrow from "../resources/assets/Arrow Right ✅.png";
-
-import imageTenedor from "../resources/assets/Union.png";
-import imageCorazon from "../resources/assets/Heart Off ✅.png";
-import imageLuna from "../resources/assets/Component 1.png";
-import imageCamino from "../resources/assets/Vector.png";
+const imageBannerCoffeUrl = "../resources/assets/Component 2.svg";
 
 export default function Metodo3Section({ globo1 }) {
     
@@ -25,9 +12,7 @@ export default function Metodo3Section({ globo1 }) {
 
     return (
         <section className="metodo3">
-            <img alt="" src={imageBannerCoffe} className="image-banner-coffe" />
-
-            <div>
+            <div className="container-globo">
                 <FadeCompoent show={globo1} duration={500} style={extraStyles}>
                     <div id="globo-1" className="globo globo-1">
                         Mitos que debes ignorar
@@ -59,6 +44,7 @@ export default function Metodo3Section({ globo1 }) {
                 </FadeCompoent>
 
             </div>
+            <img alt="" src={imageBannerCoffe} className="image-banner-coffe" />
         </section >
     )
 }

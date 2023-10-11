@@ -48,26 +48,28 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
     }, []); */
     
     return (
-        <Layout className="layoutHeader" style={{ background: colorNav }}>
-            <Header className="header" style={{ background: colorNav }}>
+        <Layout className="layoutHeader" style={{ background: colorNav, height: (toggleLogo > 1050 ? 120 : 80), justifyContent: (toggleLogo > 1050 ? 'center' : 'flex-end') }}>
+            <Header className="header" style={{ background: colorNav, alignItems: (toggleLogo > 1050 ? 'center' : 'flex-end') }}>
                 <div className="align-items-center container-logo">
                     <LogoComponent toggleLogo={toggleLogo} width={width} />
                 </div>
 
                 <div />
+                <div />
+                <div />
                 
-                <Menu className="menu-desktop" mode="horizontal" defaultSelectedKeys={['1']}>
-                    <Menu.Item key="1" onClick={() => scrollToComponent("inicio")}>
+                <Menu className="menu-desktop" mode="horizontal" defaultSelectedKeys={['1']} style={{ paddingBottom: (toggleLogo > 1050 ? '1.1rem' : '0') }}>
+                    <Menu.Item key="1" onClick={() => scrollToComponent("inicio")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
                         <Link>
                             Inicio
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="2" onClick={() => scrollToComponent("metodo1")}>
+                    <Menu.Item key="2" onClick={() => scrollToComponent("metodo1")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
                         <Link>
                             El Método
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="3" onClick={() => scrollToComponent("precio")}>
+                    <Menu.Item key="3" onClick={() => scrollToComponent("precio")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
                         <Link>
                             Precio
                         </Link>

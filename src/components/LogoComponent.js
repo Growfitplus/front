@@ -59,8 +59,8 @@ export default function LogoComponent({ toggleLogo, width }) {
             ? '0 0 50 48' // landscape
             : '0 0 50 48') // movil
           : (width >= 768 // ----------- inicio
-            ? '0 0 140 48' // landscape
-            : '0 0 140 35') // movil
+            ? '0 0 140 40' // landscape
+            : '0 0 140 40') // movil
         }
         fill="none"
         id="logo-svg"
@@ -70,8 +70,8 @@ export default function LogoComponent({ toggleLogo, width }) {
             ? '45' // landscape
             : '30') // movil
           : (width >= 768 // ----------- inicio
-            ? '90' // landscape
-            : '90') // movil
+            ? '120' // landscape
+            : '120') // movil
         }
         height="auto"
       >
