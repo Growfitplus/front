@@ -13,6 +13,7 @@ const { Header } = Layout;
 
 const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
     const [toggle, setToggle] = useState(false);
+    const [menuSelected, setMenuSelected] = useState('1');
 
     function closeMenu(){
         changeMenu(false);
@@ -25,15 +26,27 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
         document.body.style.overflow = (flag != null ? !flag : toggle) ? "auto" : "hidden"
     }
 
-    function scrollToComponent(item){
+    function scrollToComponent(item, key = '1'){
         scroller.scrollTo(item,{
-          duration: 500,
-          delay: 0,
-          smooth: 'easeInOutQuart',
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart',
         })
+        setMenuSelected([key]);
         changeMenu(false);
     }
         
+    useEffect(() => {
+        if (toggleLogo >= 2700) {
+            setMenuSelected(["3"]);
+        } else if (toggleLogo >= 800) {
+            setMenuSelected(["2"]);
+        } else {
+            setMenuSelected(["1"]);
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [toggleLogo]);
+
     /* useEffect(() => {
         window.onscroll = function() {
             console.log('... window.scrollY: ', window.scrollY);
@@ -48,8 +61,8 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
     }, []); */
     
     return (
-        <Layout className="layoutHeader" style={{ background: colorNav, height: (toggleLogo > 1050 ? 120 : 80), justifyContent: (toggleLogo > 1050 ? 'center' : 'flex-end') }}>
-            <Header className="header" style={{ background: colorNav, alignItems: (toggleLogo > 1050 ? 'center' : 'flex-end') }}>
+        <Layout className={toggleLogo >= 800 ? 'layoutHeader scrolled' : 'layoutHeader'} style={{ background: colorNav, height: (toggleLogo >= 800 ? 128 : 80), justifyContent: (toggleLogo >= 800 ? 'center' : 'flex-end') }}>
+            <Header className="header" style={{ background: colorNav, alignItems: (toggleLogo >= 800 ? 'center' : 'flex-end') }}>
                 <div className="align-items-center container-logo">
                     <LogoComponent toggleLogo={toggleLogo} width={width} />
                 </div>
@@ -58,18 +71,18 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
                 <div />
                 <div />
                 
-                <Menu className="menu-desktop" mode="horizontal" defaultSelectedKeys={['1']} style={{ paddingBottom: (toggleLogo > 1050 ? '1.1rem' : '0') }}>
-                    <Menu.Item key="1" onClick={() => scrollToComponent("inicio")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
+                <Menu className="menu-desktop" mode="horizontal" selectedKeys={menuSelected} style={{ paddingBottom: (toggleLogo >= 800 ? '1.1rem' : '0') }}>
+                    <Menu.Item key="1" onClick={() => scrollToComponent("inicio", "1")} className={(toggleLogo >= 800 ? 'no-pt' : '') }>
                         <Link>
                             Inicio
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="2" onClick={() => scrollToComponent("metodo1")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
+                    <Menu.Item key="2" onClick={() => scrollToComponent("metodo1", "2")} className={(toggleLogo >= 800 ? 'no-pt' : '') }>
                         <Link>
                             El Método
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="3" onClick={() => scrollToComponent("precio")} className={(toggleLogo > 1050 ? 'no-pt' : '') }>
+                    <Menu.Item key="3" onClick={() => scrollToComponent("precio", "3")} className={(toggleLogo >= 800 ? 'no-pt' : '') }>
                         <Link>
                             Precio
                         </Link>
@@ -91,17 +104,17 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
                 { toggle && <div className="menu-mobile">
                     <Menu mode="vertical" defaultSelectedKeys={['1']}>
                         <Menu.Item className="px-0 my-1 custom-list-item" key="1" to="#inicio">
-                            <Link onClick={() => scrollToComponent("inicio")}>
+                            <Link onClick={() => scrollToComponent("inicio", "1")}>
                                 <h1 className="ml-0">Inicio</h1>
                             </Link>
                         </Menu.Item>
                         <Menu.Item className="px-0 my-1 custom-list-item" key="2" to="#metodo1">
-                            <Link onClick={() => scrollToComponent("metodo1")}>
+                            <Link onClick={() => scrollToComponent("metodo1", "2")}>
                                 <h1 className="ml-0">El Método</h1>
                             </Link>
                         </Menu.Item>
                         <Menu.Item className="px-0 my-1 custom-list-item" key="3" to="#precio">
-                            <Link onClick={() => scrollToComponent("precio")}>
+                            <Link onClick={() => scrollToComponent("precio", "3")}>
                                 <h1 className="ml-0">Precio</h1>
                             </Link>
                         </Menu.Item>

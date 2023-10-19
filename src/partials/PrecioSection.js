@@ -38,7 +38,7 @@ export default function PrecioSection() {
                     </Row>
                 </Col>
                 <Col xs={{ span: 24 }} lg={{ span: 16 }} className="pad-lat">
-                    <Row style={{ justifyContent: 'center'}}>
+                    <Row style={{ justifyContent: 'center' }}>
                         <Col xs={{ span: 24 }} lg={{ span: 8 }} className="col-price py-1">
                             <Card className="card-prices">
                                 <h3 className="bold">
@@ -70,8 +70,8 @@ export default function PrecioSection() {
                         <Col xs={{ span: 24 }} lg={{ span: 8 }} className="col-price py-1">
                             <Card className="card-prices">
                                 <h3 className="bold">
-                                    Solo <br />
-                                    1 Sesión
+                                    Pack <br />
+                                    3 sesiones
                                 </h3>
                                 <div>
                                     <h2 className="text-left price-number">
@@ -100,8 +100,8 @@ export default function PrecioSection() {
                         <Col xs={{ span: 24 }} lg={{ span: 8 }} className="col-price py-1">
                             <Card className="card-prices">
                                 <h3 className="bold">
-                                    Solo <br />
-                                    1 Sesión
+                                    Pack <br />
+                                    6 sesiones
                                 </h3>
                                 <div>
                                     <h2 className="text-left price-number">
@@ -133,24 +133,26 @@ export default function PrecioSection() {
 
             <hr className="d-none d-md-block hr-bar" />
 
-            <Link to="mailto:growfitplus@gmail.com" target="_blank" rel="noopener noreferrer" className="container-link">
-                <Row className="pad-lat py-2">
-                    <Col xs={{ span: 24 }} lg={{ span: 12 }} className="" >
-                        <h3 className="text-dudas">¿Tienes dudas?</h3>
-                    </Col>
-                    <Col xs={{ span: 24 }} lg={{ span: 24 }} className="d-block d-md-none" >
-                        <hr className="d-flex d-md-none hr-bar" />
-                    </Col>
-                    <Col xs={{ span: 24 }} lg={{ span: 12 }} className="">
-                        <div className="li-to-email align-items-center">
-                            <div rel="noopener noreferrer" className="container-lonk-to-email">
-                                <h3 className="link-agendar">growfitplus@gmail.com</h3>
-                                <img alt="" className="icon-image" src={imageArrow} />
+            <Row className="container-dudas">
+                <Link to="mailto:growfitplus@gmail.com" target="_blank" role="div" className="pad-lat-mini py-2 container-link">
+                    <Row className="w-100">
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }} className="" >
+                            <h3 className="text-dudas">¿Tienes dudas?</h3>
+                        </Col>
+                        <Col xs={{ span: 24 }} lg={{ span: 24 }} className="d-block d-md-none" >
+                            <hr className="d-flex d-md-none hr-bar" />
+                        </Col>
+                        <Col xs={{ span: 24 }} lg={{ span: 12 }} className="">
+                            <div className="li-to-email align-items-center">
+                                <Link to="mailto:growfitplus@gmail.com" target="_blank" rel="noopener noreferrer" className="container-lonk-to-email">
+                                    <h3 className="link-agendar">growfitplus@gmail.com</h3>
+                                    <img alt="" className="icon-image" src={imageArrow} />
+                                </Link>
                             </div>
-                        </div>
-                    </Col>
-                </Row>
-            </Link>
+                        </Col>
+                    </Row>
+                </Link>
+            </Row>
         </section>
     )
 }

@@ -173,6 +173,14 @@ p {
     height: 40px;
 }
 
+.container-lonk-to-email .icon-image {
+    max-height: 40px;
+    max-width: 40px;
+    height: 29px;
+    padding-left: 3rem;
+    /* width: 29px; */
+}
+
 .icon-image {
     max-height: 40px;
     max-width: 40px;
@@ -272,8 +280,19 @@ p {
 
 .metodo3 {
     height: 100vh;
+    min-height: 900px;
     display: flex;
     justify-content: flex-end;
+}
+
+.pad-lat-mini {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @media (min-width: 768px) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 }
 
 .pad-lat-min {
@@ -291,21 +310,21 @@ p {
     }
 }
 
-.pad-lat:hover {
+.pad-lat-mini:hover {
     background-color: #FAFBFF;
 }
 
-.pad-lat:hover .container-lonk-to-email h3 {
+.pad-lat-mini:hover .container-lonk-to-email h3 {
     transform: translateX(50px);
     transition: transform 0.3s ease;
 }
 
-.pad-lat:hover .container-lonk-to-email .icon-image {
+.pad-lat-mini:hover .container-lonk-to-email .icon-image {
     transform: translateX(50px);
     transition: transform 0.3s ease;
 }
 
-.pad-lat .container-lonk-to-email:not(:hover) {
+.pad-lat-mini .container-lonk-to-email:not(:hover) {
     transition-delay: 0.3s ease;
 }
 
@@ -341,7 +360,8 @@ p {
 
 .image-banner-coffe {
     position: absolute;
-    height: 100%;
+    height: 100vh;
+    min-height: 900px;
     width: 100%;
     object-fit: cover;
     z-index: 0;
@@ -351,6 +371,19 @@ p {
     }
 }
 
+
+.layoutFooter{
+    background-color: #434D5C;
+    color: #FFFFFF;
+    height: 100px;
+    padding-inline: 25px;
+    display: flex;
+    justify-content: center;
+    
+    @media (min-width: 768px) {
+        padding-inline: 50px;
+    }
+}
 
 /* fin inicio */
 
@@ -466,6 +499,9 @@ li h2 {
         display: flex;
     }
 }
+.scrolled .agendar-button-nav {
+    margin-bottom: 13px;
+}
 
 .agendar-button-nav:hover {
     border-color: transparent;
@@ -535,6 +571,7 @@ li h2 {
     margin-top: -25px;
     margin-left: 0.3rem;
     font-weight: bold;
+    font-size: 13px;
 }
 
 .text-dudas {
@@ -547,15 +584,35 @@ li h2 {
 .li-to-email {
     display: flex;
     justify-content: space-between;
+    
 
     @media (min-width: 768px) {
-        justify-content: space-around;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 5rem;
     }
 }
 
-.container-link {
+.container-dudas {
     text-decoration: none;
     color: #232A38;
+}
+
+.container-dudas:hover {
+}
+
+.container-link {
+    width: 100%;
+    text-decoration: none;
+    color: #232A38;
+    text-decoration:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-link:hover {
+    background-color: #FAFBFF !important;
 }
 
 .menu-mobile {
@@ -711,7 +768,7 @@ li h2 {
 }
 
 .layoutHeader {
-    height: 120px;
+    height: 128px;
     display: flex;
     position: fixed;
     z-index: 10;
@@ -841,6 +898,7 @@ section {
 }
 
 .link-agendar {
+    height: 40px;
     font-weight: bold;
 
     @media (max-width: 767px) {

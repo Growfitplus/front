@@ -43,7 +43,8 @@ export default function LogoComponent({ toggleLogo, width }) {
   };
 
   useEffect(() => {
-    if (toggleLogo && toggleLogo > 1050) {
+    console.log('toggleLogo: ', toggleLogo)
+    if (toggleLogo && toggleLogo >= 800) {
       handleClickLogo(false);
     } else {
       handleClickLogo(true);
@@ -54,7 +55,7 @@ export default function LogoComponent({ toggleLogo, width }) {
     <>
       <svg
         alt=""
-        viewBox={toggleLogo > 1050
+        viewBox={toggleLogo >= 800
           ? (width >= 768 // ----------- scroll
             ? '0 0 50 48' // landscape
             : '0 0 50 48') // movil
@@ -65,7 +66,7 @@ export default function LogoComponent({ toggleLogo, width }) {
         fill="none"
         id="logo-svg"
         className=""
-        width={toggleLogo > 1050
+        width={toggleLogo >= 800
           ? (width >= 768 // ----------- scroll
             ? '45' // landscape
             : '30') // movil
