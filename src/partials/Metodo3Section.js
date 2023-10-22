@@ -3,7 +3,6 @@ import "../resources/css/Home.css"
 import FadeCompoent from "../components/FadeComponent";
 
 import imageBannerCoffe from "../resources/assets/Component 2.svg";
-const imageBannerCoffeUrl = "../resources/assets/Component 2.svg";
 
 export default function Metodo3Section({ globo1 }) {
     

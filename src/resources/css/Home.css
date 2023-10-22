@@ -644,7 +644,7 @@ li h2 {
 .menu-desktop {
     display: none;
     background: transparent;
-    min-width: 275px;
+		min-width: 300px;
     border-bottom: none !important;
 
     @media (min-width: 768px) {

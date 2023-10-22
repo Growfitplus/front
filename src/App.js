@@ -12,11 +12,8 @@ import "./resources/css/preLoading.css";
 export default function App() {
 
   const [time, setTime] = useState(0);
-  const [status, setStatus] = useState('stopped');
-  const [intervalo, setIntervalo] = useState(1500);
 
   const [loading, setloading] = useState(true);
-  const [completed, setcompleted] = useState(false);
 
   useEffect(() => {
     let newTime = 0;
@@ -29,7 +26,6 @@ export default function App() {
         setTime(newTime);
       } else {
         setloading(false);
-        setcompleted(true);
         clearInterval(interval);
       }
     }, 80);
