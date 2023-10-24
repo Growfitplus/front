@@ -18,11 +18,11 @@ const FooterComponent = () => {
                     © 2023. growfit+
                 </div>
                 <div style={styles.layoutFooter.footer.links}>
-                    <Link className="link-foot-social bold" to="https://www.instagram.com/growfik_agency" target="_blank" rel="noopener noreferrer">
+                    <Link className="link-foot-social bold" to="https://www.instagram.com/growfitplus_" target="_blank" rel="noopener noreferrer">
                         <img alt="" className="icon-image-min" src={imageInstagram} />
                         Instagram
                     </Link>
-                    <Link className="link-foot-social bold" to="https://www.tiktok.com/@growfik" target="_blank" rel="noopener noreferrer">
+                    <Link className="link-foot-social bold" to="https://www.tiktok.com/@growfitplus_" target="_blank" rel="noopener noreferrer">
                         <img alt="" className="icon-image-min" src={imageTiktok} />
                         TikTok
                     </Link>
