@@ -37,7 +37,7 @@ export default function InicioSection() {
               Efecto Rebote
             </h3>
             <div className="flex">
-              <Link className="boton-inicio-agendar" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer"
+              <Link className="boton-inicio-agendar" to="https://api.whatsapp.com/send?phone=+56982554625&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer"
               onMouseEnter={() => setHoverAgendar1(true)}
               onMouseLeave={() => setHoverAgendar1(false)}
               >

@@ -119,7 +119,7 @@ const NavBarComponent = ({ colorNav, toggleLogo, width }) => {
                             </Link>
                         </Menu.Item>
                     </Menu>
-                    <Link className="boton-menu-agendar" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer"
+                    <Link className="boton-menu-agendar" to="https://api.whatsapp.com/send?phone=+56982554625&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer"
                     >
                         <h1 className="ml-0">Agendar</h1>
                         <img alt="" className="icon-image-menu" src={imageArrow} />

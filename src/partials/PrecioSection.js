@@ -61,7 +61,7 @@ export default function PrecioSection() {
                                     Plan Personalizado
                                 </h5>
                                 <div className="justify-content-center">
-                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
+                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=+56982554625&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
                                         Agendar
                                     </Link>
                                 </div>
@@ -91,7 +91,7 @@ export default function PrecioSection() {
                                     Medición de resultados
                                 </h5>
                                 <div className="justify-content-center">
-                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
+                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=+56982554625&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
                                         Agendar
                                     </Link>
                                 </div>
@@ -121,7 +121,7 @@ export default function PrecioSection() {
                                     Medición de resultados
                                 </h5>
                                 <div className="justify-content-center">
-                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=58xxxxxxxxxx&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
+                                    <Link className="agendar-button" to="https://api.whatsapp.com/send?phone=+56982554625&text=Buen%20día%20quiero%20agendar%20una%20sesión" target="_blank" rel="noopener noreferrer">
                                         Agendar
                                     </Link>
                                 </div>
